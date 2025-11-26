@@ -26,7 +26,8 @@ android {
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
+                decoroutinatorAndroidProGuardRules()
             )
         }
     }
@@ -42,7 +43,14 @@ android {
 }
 
 stacktraceDecoroutinator {
-    enabled = true
+    artifactTypes = setOf(
+        ArtifactTypeDefinition.JAR_TYPE,
+        ArtifactTypeDefinition.JVM_CLASS_DIRECTORY,
+        ArtifactTypeDefinition.ZIP_TYPE,
+        "aar",
+        "android-classes-directory",
+        "android-classes-jar"
+    )
 }
 
 dependencies {
