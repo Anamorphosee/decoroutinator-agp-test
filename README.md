@@ -1,7 +1,3 @@
-# Decoroutinator Unit Test Classpath Issue
-
-This is a minimal reproducible example demonstrating an issue with Decoroutinator 2.5.8 where transformed classes are not available on the unit test classpath.
-
 ## Environment
 
 - Android Gradle Plugin: 8.9.1
